@@ -1,6 +1,14 @@
 
 import './App.css';
 
+function generateBoard(){
+ 
+  console.log("printed from within function")
+  return "returned from function"
+}
+
+var temp = generateBoard()
+
 function App() {
   return (
     <div className="App">
@@ -12,6 +20,8 @@ function App() {
             square place 
             <br/>
             100 squares
+            {console.log(temp)}
+            {console.log("test")}
           </div>
         </div>
       </header>
