@@ -1,13 +1,7 @@
+import NumberList from './components/game'
+import './App.css'
 
-import './App.css';
-
-function generateBoard(){
- 
-  console.log("printed from within function")
-  return "returned from function"
-}
-
-var temp = generateBoard()
+const numbers = [1, 2, 3, 4, 5];
 
 function App() {
   return (
@@ -20,9 +14,8 @@ function App() {
             square place 
             <br/>
             100 squares
-            {console.log(temp)}
-            {console.log("test")}
           </div>
+          <NumberList numbers={numbers}/>
         </div>
       </header>
     </div>
