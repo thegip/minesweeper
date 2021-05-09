@@ -1,7 +1,7 @@
 import NumberList from './components/game'
 import './App.css'
 
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [[1], [2], [3], [4], [5]];
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
             <br/>
             100 squares
           </div>
+
           <NumberList numbers={numbers}/>
         </div>
       </header>
