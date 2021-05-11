@@ -1,17 +1,18 @@
-function NumberList(props) {
-    const numbers = props.numbers;
+function Square(props) {
+  
+  console.log(props)
+
     return (
-      <ul>
-        {numbers.map((number) =>
-          <ListItem key={number.toString()}
-                    value={number} />
-        )}
-      </ul>
+      <div>
+        <p>this is from component</p>
+        {props.squares[0][0].index}
+        <br/>
+        {props.squares[1][0].index}
+      </div>
+     
     );
   }
 
-  function ListItem(props) {
-    return <li>{props.value}</li>;
-  }
 
-  export default NumberList
+
+  export default Square

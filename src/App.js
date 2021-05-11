@@ -1,7 +1,32 @@
-import NumberList from './components/game'
+import Square from './components/game'
 import './App.css'
 
-const numbers = [[1], [2], [3], [4], [5]];
+const squares = [
+  [
+    {
+      index: 11,
+      name:"test",
+      bomb: true
+    },
+    {
+      index: 12,
+      name:"test2",
+      bomb: false
+    }
+  ],
+  [
+    {
+      index: 21,
+      name:"test",
+      bomb: true
+    },
+    {
+      index: 22,
+      name:"test2",
+      bomb: false
+    }
+  ]
+];
 
 function App() {
   return (
@@ -16,7 +41,13 @@ function App() {
             100 squares
           </div>
 
-          <NumberList numbers={numbers}/>
+          <div>
+            {squares[0].index}
+            {squares[1].index}
+            {squares[1].name}
+          </div>
+
+          <Square squares={squares}/>
         </div>
       </header>
     </div>
