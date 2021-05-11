@@ -42,9 +42,9 @@ function App() {
           </div>
 
           <div>
-            {squares[0].index}
-            {squares[1].index}
-            {squares[1].name}
+            {squares[0][0].index}
+            {squares[1][0].index}
+            {squares[1][0].name}
           </div>
 
           <Square squares={squares}/>
