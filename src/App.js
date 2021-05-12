@@ -17,12 +17,36 @@ const squares = [
   [
     {
       index: 21,
-      name:"test",
+      name:"test3",
       bomb: true
     },
     {
       index: 22,
-      name:"test2",
+      name:"test4",
+      bomb: false
+    }
+  ],
+  [
+    {
+      index: 11,
+      name:"test5",
+      bomb: true
+    },
+    {
+      index: 12,
+      name:"test6",
+      bomb: false
+    }
+  ],
+  [
+    {
+      index: 21,
+      name:"test7",
+      bomb: true
+    },
+    {
+      index: 22,
+      name:"test8",
       bomb: false
     }
   ]

@@ -1,17 +1,25 @@
 function Square(props) {
   
-  console.log(props)
+  const squares = props.squares;
+  console.log(squares)
 
-    return (
-      <div>
-        <p>this is from component</p>
-        {props.squares[0][0].index}
-        <br/>
-        {props.squares[1][0].index}
-      </div>
-     
-    );
-  }
+
+  return (
+    <div>
+      {squares.map((items) => {
+        return (
+          <ul>
+            {items.map((subItems) => {
+              console.log(subItems)
+              return <li> {subItems.name} </li>;
+            })}
+          </ul>
+        );
+      })}
+    </div>
+  );
+
+}
 
 
 
