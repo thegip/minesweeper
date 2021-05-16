@@ -1,3 +1,5 @@
+import './game.css'
+
 function Square(props) {
   
   const squares = props.squares;
@@ -5,15 +7,15 @@ function Square(props) {
 
 
   return (
-    <div>
+    <div className="container">
       {squares.map((items) => {
         return (
-          <ul>
+          <div className="row">
             {items.map((subItems) => {
               console.log(subItems)
-              return <li> {subItems.name} </li>;
+              return <div className="square"> {subItems.name} </div>;
             })}
-          </ul>
+          </div>
         );
       })}
     </div>
