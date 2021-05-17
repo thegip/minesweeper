@@ -1,8 +1,8 @@
-import './game.css'
+import './Game.css'
 
 function Square(props) {
   
-  const squares = props.squares;
+  const squares = props.board;
   console.log(squares)
 
 
