@@ -53,7 +53,12 @@ export function TestBoard(){
   return (squares)
 }
 
-export function GenerateBoard(){
-    
+export function GenerateBoard(x,y){
+    let i
+    let temp 
+    for(i=0; i<x; i++){
+        
+    }
+
     return("this is from GenerateBoard")
 }
