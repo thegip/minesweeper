@@ -54,8 +54,6 @@ export function TestBoard(){
 }
 
 export function GenerateBoard(){
-    let temp = "this is from GenerateBoard"
-    return(
-        temp
-    )
+    
+    return("this is from GenerateBoard")
 }
