@@ -1,9 +1,10 @@
 import Game from './components/Game'
 import './App.css'
-import {GenerateBoard} from './components/GenerateBoard'
+import {TestBoard,GenerateBoard} from './components/GenerateBoard'
 
-const board = GenerateBoard()
+const board = TestBoard()
 console.log(board)
+console.log(GenerateBoard())
 
 function App() {
   return (

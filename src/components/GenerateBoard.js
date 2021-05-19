@@ -1,4 +1,4 @@
-export function GenerateBoard(){
+export function TestBoard(){
     const squares = [
         [
             {
@@ -53,3 +53,9 @@ export function GenerateBoard(){
   return (squares)
 }
 
+export function GenerateBoard(){
+    let temp = "this is from GenerateBoard"
+    return(
+        temp
+    )
+}
