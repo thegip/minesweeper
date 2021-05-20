@@ -54,11 +54,14 @@ export function TestBoard(){
 }
 
 export function GenerateBoard(x,y){
-    let i
-    let temp 
-    for(i=0; i<x; i++){
-        
+    
+    let temp = []
+    for(let i=0; i<x; i++){
+        temp[i]=[]
+        for(let j=0; j<x; j++){
+            temp[i][j]='keepo'
+        }
     }
 
-    return("this is from GenerateBoard")
+    return(temp)
 }
