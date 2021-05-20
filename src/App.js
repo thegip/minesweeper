@@ -2,8 +2,7 @@ import Game from './components/Game'
 import './App.css'
 import {TestBoard,GenerateBoard} from './components/GenerateBoard'
 
-const board = TestBoard()
-console.log(GenerateBoard(20,5))
+const board = GenerateBoard(10,5)
 
 function App() {
   return (
