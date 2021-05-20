@@ -58,7 +58,7 @@ export function GenerateBoard(x,y){
     let temp = []
     for(let i=0; i<x; i++){
         temp[i]=[]
-        for(let j=0; j<x; j++){
+        for(let j=0; j<y; j++){
             temp[i][j]='keepo'
         }
     }

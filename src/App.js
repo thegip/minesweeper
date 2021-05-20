@@ -3,7 +3,7 @@ import './App.css'
 import {TestBoard,GenerateBoard} from './components/GenerateBoard'
 
 const board = TestBoard()
-console.log(GenerateBoard(10,10))
+console.log(GenerateBoard(20,5))
 
 function App() {
   return (
