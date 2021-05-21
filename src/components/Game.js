@@ -10,7 +10,7 @@ function Square(props) {
         return (
           <div className="row">
             {items.map((subItems) => {
-              return <div className="square"> {subItems.name} </div>;
+              return <div className="square"> {subItems.column} {subItems.row} </div>;
             })}
           </div>
         );

@@ -60,12 +60,17 @@ export function GenerateBoard(x,y){
         temp[i]=[]
         for(let j=0; j<y; j++){
             temp[i][j]={
-                index: 21,
-                name:"test7",
-                bomb: true
+                column: i,
+                row: j,
+                adjacent:0,
+                bomb: false
             }
         }
     }
 
     return(temp)
+}
+
+function GenerateBombs(){
+    
 }

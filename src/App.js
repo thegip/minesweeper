@@ -3,7 +3,7 @@ import './App.css'
 import {TestBoard,GenerateBoard} from './components/GenerateBoard'
 
 const board = GenerateBoard(10,5)
-
+console.log(board)
 function App() {
   return (
     <div className="App">
