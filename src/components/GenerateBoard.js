@@ -28,4 +28,12 @@ function GenerateBombs(board,length){
     
 
     board[0][0].bomb=true
+
+    
+    // loop through 2d array {
+    //     if array id ===  random number
+    //     bomb = true
+    // }
+
+
 }
