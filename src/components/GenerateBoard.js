@@ -1,23 +1,25 @@
 export function GenerateBoard(x,y,bombCount){
-    let kek = 0
-    let temp = []
+    let id = 0
+    let board = []
     for(let i=0; i<x; i++){
-        temp[i]=[]
+        board[i]=[]
         for(let j=0; j<y; j++){
-            temp[i][j]={
-                id: kek,
+            board[i][j]={
+                id: id,
                 column: i,
                 row: j,
                 adjacent:0,
                 bomb: false
             }
-            kek++
+            id++
         }
     }
    
-    GenerateBombs(temp,kek,bombCount,x,y)
+    GenerateBombs(board,id,bombCount,x,y)
+    CalculateAdjecentBombs()
+    
 
-    return(temp)
+    return(board)
 }
 
 function GenerateBombs(board,length,bombCount,x,y){
@@ -25,9 +27,7 @@ function GenerateBombs(board,length,bombCount,x,y){
     for(let i=0; i<bombCount; i++){
         bombLocations[i]=Math.floor(Math.random() * length)
     }
-    console.log(bombLocations)
 
-    
     for(let k=0; k<bombCount; k++){
         for(let i=0; i<x; i++){
             for(let j=0; j<y; j++){
@@ -38,4 +38,8 @@ function GenerateBombs(board,length,bombCount,x,y){
             }
         }
     }
+}
+
+function CalculateAdjecentBombs(){
+
 }
