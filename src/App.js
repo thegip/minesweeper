@@ -2,8 +2,9 @@ import Game from './components/Game'
 import './App.css'
 import {GenerateBoard} from './components/GenerateBoard'
 
-const board = GenerateBoard(10,5)
-console.log(board)
+const board = GenerateBoard(10,5,7)
+//console.log(board)
+
 function App() {
   return (
     <div className="App">

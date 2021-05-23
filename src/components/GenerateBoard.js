@@ -1,4 +1,4 @@
-export function GenerateBoard(x,y){
+export function GenerateBoard(x,y,bombCount){
     let kek = 0
     let temp = []
     for(let i=0; i<x; i++){
@@ -14,26 +14,28 @@ export function GenerateBoard(x,y){
             kek++
         }
     }
-
-    GenerateBombs(temp,kek)
+   
+    GenerateBombs(temp,kek,bombCount,x,y)
 
     return(temp)
 }
 
-function GenerateBombs(board,length){
-    //store x amount of resaults in array
-    let temp = Math.floor(Math.random() * length)
-    console.log(temp)
-    console.log(length)
-    
-
-    board[0][0].bomb=true
+function GenerateBombs(board,length,bombCount,x,y){
+    let bombLocations = []
+    for(let i=0; i<bombCount; i++){
+        bombLocations[i]=Math.floor(Math.random() * length)
+    }
+    console.log(bombLocations)
 
     
-    // loop through 2d array {
-    //     if array id ===  random number
-    //     bomb = true
-    // }
-
-
+    for(let k=0; k<bombCount; k++){
+        for(let i=0; i<x; i++){
+            for(let j=0; j<y; j++){
+                if (board[i][j].id === bombLocations[k]){
+                    console.log(board[i][j].id)
+                    board[i][j].bomb=true
+                }
+            }
+        }
+    }
 }
