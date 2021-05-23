@@ -16,7 +16,7 @@ export function GenerateBoard(x,y,bombCount){
     }
    
     GenerateBombs(board,id,bombCount,x,y)
-    CalculateAdjecentBombs()
+    CalculateAdjecentBombs(board)
     
 
     return(board)
@@ -40,6 +40,6 @@ function GenerateBombs(board,length,bombCount,x,y){
     }
 }
 
-function CalculateAdjecentBombs(){
-
+function CalculateAdjecentBombs(board){
+    
 }
