@@ -41,6 +41,7 @@ function GenerateBombs(board,length,bombCount,x,y){
 
 function CalculateAdjecentBombs(board,x,y){
     
+    //due to out of index the outer border needs to be calculated by itself
 
     // CalculateTopLeftCorner()
     // calculateTopRightCorner()
@@ -64,7 +65,7 @@ function CalculateAdjecentBombs(board,x,y){
 
 function CalculateCenter(board,x,y){
 
-    let adjecentBombs = 0
+    
 
     //loop trough the inner part of "board"
     for(let i=1; i<board.length-1; i++){
