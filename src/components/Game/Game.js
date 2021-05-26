@@ -12,7 +12,7 @@ function Board(props) {
           <div className="row">
             {items.map((subItems) => {
               return <div>
-                <Square/>
+                <Square square={subItems}/>
                 <div className="square"> 
                 {subItems.column} 
                 {subItems.row} 
