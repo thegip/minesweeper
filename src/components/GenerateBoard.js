@@ -66,17 +66,20 @@ function CalculateCenter(board,x,y){
 
     let adjecentBombs = 0
 
+    //loop trough the inner part of "board"
     for(let i=1; i<board.length-1; i++){
         for(let j=1; j<board[0].length-1; j++){
-            
-            if (board[i][j].bomb === true){
-                console.log(board[i][j].id, "has abomb")
-                adjecentBombs++
-
-                console.log(i)
-                console.log(j)
+            let adjecentBombs = 0
+            //check the adjacent squares of board[i][j]
+            for (let a=i-1;a<=i+1;a++){
+                for (let b=j-1;b<=j+1;b++){
+                    if (board[a][b].bomb === true){
+                        adjecentBombs++
+                    }
+                }
             }
-            
+            board[i][j].adjacent=adjecentBombs
         }
     }
+    console.log(adjecentBombs)
 }
