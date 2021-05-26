@@ -40,8 +40,19 @@ function GenerateBombs(board,length,bombCount,x,y){
 }
 
 function CalculateAdjecentBombs(board,x,y){
-    let adjecentBombs = 0
+    
 
+    // CalculateTopLeftCorner()
+    // calculateTopRightCorner()
+    // CalculateBottomLeftCorner()
+    // CalculateBottomRightCorner()
+
+    // CalculateLeftSide()
+    // CalculateRightSide()
+    // CalculateTopSide()
+    // CalculateBottomSide()
+
+    CalculateCenter(board,x,y)
     //check 4 corners induvidually with their own function
 
     //check each side individually with their own function
@@ -49,16 +60,23 @@ function CalculateAdjecentBombs(board,x,y){
 
     //change to go from array[1] untill array.length-1
     //same but different for the nested loop
-    for(let i=0; i<x; i++){
-        for(let j=0; j<y; j++){
+}
+
+function CalculateCenter(board,x,y){
+
+    let adjecentBombs = 0
+
+    for(let i=1; i<board.length-1; i++){
+        for(let j=1; j<board[0].length-1; j++){
             
             if (board[i][j].bomb === true){
                 console.log(board[i][j].id, "has abomb")
                 adjecentBombs++
+
+                console.log(i)
+                console.log(j)
             }
             
         }
     }
-
-    console.log(adjecentBombs)
 }
