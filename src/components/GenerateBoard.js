@@ -81,5 +81,4 @@ function CalculateCenter(board,x,y){
             board[i][j].adjacent=adjecentBombs
         }
     }
-    console.log(adjecentBombs)
 }
