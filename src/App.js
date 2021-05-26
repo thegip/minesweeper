@@ -1,8 +1,8 @@
-import Game from './components/Game'
+import Game from './components/Game/Game'
 import './App.css'
 import {GenerateBoard} from './components/GenerateBoard'
 
-const board = GenerateBoard(10,5,7)
+const board = GenerateBoard(10,9,10)
 console.log(board)
 
 function App() {
@@ -20,4 +20,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

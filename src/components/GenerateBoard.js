@@ -15,21 +15,22 @@ export function GenerateBoard(x,y,bombCount){
         }
     }
    
-    GenerateBombs(board,id,bombCount,x,y)
-    CalculateAdjecentBombs(board,x,y)
+    GenerateBombs(board,id,bombCount)
+    CalculateAdjecentBombs(board)
 
     return(board)
 }
 
-function GenerateBombs(board,length,bombCount,x,y){
+function GenerateBombs(board,id,bombCount){
+    let length = id
     let bombLocations = []
     for(let i=0; i<bombCount; i++){
         bombLocations[i]=Math.floor(Math.random() * length)
     }
 
     for(let k=0; k<bombCount; k++){
-        for(let i=0; i<x; i++){
-            for(let j=0; j<y; j++){
+        for(let i=0; i<board.length; i++){
+            for(let j=0; j<board[0].length; j++){
                 if (board[i][j].id === bombLocations[k]){
                     console.log(board[i][j].id)
                     board[i][j].bomb=true
@@ -39,7 +40,7 @@ function GenerateBombs(board,length,bombCount,x,y){
     }
 }
 
-function CalculateAdjecentBombs(board,x,y){
+function CalculateAdjecentBombs(board){
     
     //due to out of index the outer border needs to be calculated by itself
 
@@ -53,7 +54,7 @@ function CalculateAdjecentBombs(board,x,y){
     // CalculateTopSide()
     // CalculateBottomSide()
 
-    CalculateCenter(board,x,y)
+    CalculateCenter(board)
     //check 4 corners induvidually with their own function
 
     //check each side individually with their own function
@@ -63,7 +64,7 @@ function CalculateAdjecentBombs(board,x,y){
     //same but different for the nested loop
 }
 
-function CalculateCenter(board,x,y){
+function CalculateCenter(board){
 
     
 
