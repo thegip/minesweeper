@@ -2,7 +2,7 @@ import './Game.css'
 
 function Square(props){
     console.log(props)
-    return <div className="square">{props.square.id}</div>
+    return <button className="square" onClick={() => { console.log(props.square.id) }}>{props.square.id}</button>
 }
 
 export default Square

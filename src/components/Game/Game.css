@@ -11,4 +11,6 @@
     font-size: 12px;
     text-align: center;
     color: grey;
+    min-width: 50px;
+    min-height: 50px;
 }
