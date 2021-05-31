@@ -1,6 +1,8 @@
-function Square(content){
-    console.log(content)
-    return <div>from  square component</div>
+import './Game.css'
+
+function Square(props){
+    console.log(props)
+    return <div className="square">{props.square.id}</div>
 }
 
 export default Square

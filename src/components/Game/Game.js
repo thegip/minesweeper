@@ -9,14 +9,10 @@ function Board(props) {
     <div className="container">
       {squares.map((items) => {
         return (
-          <div className="row">
+          <div >
             {items.map((subItems) => {
               return <div>
                 <Square square={subItems}/>
-                <div className="square"> 
-                {subItems.column} 
-                {subItems.row} 
-                Adj: {subItems.adjacent} </div>
               </div>
             })}
           </div>
