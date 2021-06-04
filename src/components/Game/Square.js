@@ -1,4 +1,5 @@
 import './Game.css'
+import {useState} from 'react' 
 
 function Square(props){
     console.log(props)
