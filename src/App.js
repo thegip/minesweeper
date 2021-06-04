@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>MINESWEEEPEERRR POGGERGES</h1>
+        <h1>MINESWEEEPER</h1>
         <div class="gamearea">
-          <div>header board</div>
+          <div>~~menu~~</div>
 
           <Game board={board}/>
         </div>
