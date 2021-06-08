@@ -2,7 +2,6 @@ import './Game.css'
 import {useState} from 'react' 
 
 function Square(props){
-    console.log(props)
     const [count, setCount] = useState(0);
     const [color, setColor] = useState("blue");
 
@@ -20,14 +19,7 @@ function Square(props){
     }
 
     function ToggleClicked(){
-        if (color === "blue" ){
-            setColor("red")
-           
-        }
-        if (color === "red" ){
-            setColor("blue")
-            
-        }
+        color === "blue" ? setColor("red") : setColor("blue") 
     }
 }
 
