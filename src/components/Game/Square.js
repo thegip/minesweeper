@@ -2,24 +2,29 @@ import './Game.css'
 import {useState} from 'react' 
 
 function Square(props){
-    const [count, setCount] = useState(0);
-    const [color, setColor] = useState("blue");
+    let color1 = "blue"
+    let color2 = "red"
+
+    const [color, setColor] = useState(color1);
+
+
 
     let style = {
-        color: color
+        color: "white",
+        backgroundColor: color 
     }
 
 
     if(props.square.bomb===true){
-        return <button style={style} className="square" onClick={ToggleClicked}>jeff {count}</button>
+        return <button style={style} className="square" onClick={ToggleClicked}>bomb</button>
     }
 
     if(props.square.bomb===false){
-        return <button className="square" onClick={() => { console.log(props.square.id) }}>{props.square.id}</button>
+        return <button style={style} className="square" onClick={ToggleClicked}>{props.square.adjacent}</button>
     }
 
     function ToggleClicked(){
-        color === "blue" ? setColor("red") : setColor("blue") 
+        color === color1 ? setColor(color2) : setColor(color1) 
     }
 }
 
