@@ -25,9 +25,12 @@ function Square(props){
 
     function ToggleClicked(){
         color === color1 ? setColor(color2) : setColor(color1) 
+        // if(color === color1){
+        //     setColor(color2)
+        // }
     }
 }
 
 
-
+// if total number of squares - bomber === total clicked squraes {win()}
 export default Square
