@@ -5,9 +5,8 @@ function Square(props){
     let color1 = "blue"
     let color2 = "red"
 
-    const [color, setColor] = useState(color1);
-
-
+    const [color, setColor] = useState(color1)
+    //const [flag, setFlag] = useState(false)
 
     let style = {
         color: "white",
@@ -16,11 +15,22 @@ function Square(props){
 
 
     if(props.square.bomb===true){
-        return <button style={style} className="square" onClick={ToggleClicked}>bomb</button>
+        return <button 
+            style={style} 
+            className="square" 
+            onClick={(e) => ToggleClicked(e)}
+            onContextMenu={RightClick}>
+                bomb
+        </button>
     }
 
     if(props.square.bomb===false){
-        return <button style={style} className="square" onClick={ToggleClicked}>{props.square.adjacent}</button>
+        return <button 
+        style={style} 
+        className="square" 
+        onClick={ToggleClicked}>
+            {props.square.adjacent}
+    </button>
     }
 
     function ToggleClicked(){
@@ -28,6 +38,11 @@ function Square(props){
         // if(color === color1){
         //     setColor(color2)
         // }
+    }
+
+    function RightClick(e){
+        e.preventDefault()
+        console.log("keepo")
     }
 }
 
