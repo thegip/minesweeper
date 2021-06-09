@@ -1,13 +1,14 @@
 import './Game.css'
 import {useState} from 'react' 
 
+//todo
+// lift up "isClicked" to sum up in game.js
+
 function Square(props){
     let color1 = "blue"
     let color2 = "red"
-
     const [color, setColor] = useState(color1)
     //const [flag, setFlag] = useState(false)
-
     let style = {
         color: "white",
         backgroundColor: color 
