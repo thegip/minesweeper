@@ -3,6 +3,8 @@ import {useState} from 'react'
 
 //todo
 // lift up "isClicked" to sum up in game.js
+//cemment  to test git desktop
+
 
 function Square(props){
     let color1 = "blue"
