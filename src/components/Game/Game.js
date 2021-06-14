@@ -12,7 +12,7 @@ function Board(props) {
           <div >
             {items.map((subItems) => {
               return <div>
-                <Square square={subItems}/>
+                <Square square={subItems} lift={lift}/>
               </div>
             })}
           </div>
@@ -23,6 +23,9 @@ function Board(props) {
 
 }
 
+function lift(liftedValue){
+  console.log(liftedValue)
+}
 
 
   export default Board

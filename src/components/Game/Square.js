@@ -9,6 +9,9 @@ function Square(props){
     let color2 = "red"
     const [color, setColor] = useState(color1)
     //const [flag, setFlag] = useState(false)
+
+    props.lift(1)
+
     let style = {
         color: "white",
         backgroundColor: color 
