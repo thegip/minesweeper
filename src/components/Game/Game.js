@@ -1,9 +1,11 @@
 import './Game.css'
 import Square from './Square'
 
+let temp = 0
 function Board(props) {
   
-  const squares = props.board;
+  const squares = props.board
+  
   
   return (
     <div className="container">
@@ -23,8 +25,9 @@ function Board(props) {
 
 }
 
-function lift(liftedValue){
-  console.log(liftedValue)
+function lift(){
+  temp++
+  console.log(temp)
 }
 
 

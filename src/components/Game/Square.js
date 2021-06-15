@@ -12,7 +12,7 @@ function Square(props){
     const [color, setColor] = useState(color1)
     //const [flag, setFlag] = useState(false)
 
-    props.lift(1)
+    
 
     let style = {
         color: "white",
@@ -54,6 +54,7 @@ function Square(props){
 
     function Clicked(){
         console.log("kappa")
+        props.lift()
     }
 }
 
