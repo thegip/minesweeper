@@ -24,9 +24,10 @@ function Square(props){
         return <button 
             style={style} 
             className="square" 
-            onClick={(e) => ToggleClicked(e)}
-            onContextMenu={RightClick}>
-                bomb
+            onClick={(e) => GameOver(e)}
+            onContextMenu={(e) => ToggleFlag(e)}
+            >
+            bomb
         </button>
     }
 
@@ -34,21 +35,25 @@ function Square(props){
         return <button 
         style={style} 
         className="square" 
-        onClick={ToggleClicked}>
-            {props.square.adjacent}
+        onClick={Clicked}
+        onContextMenu={(e) => ToggleFlag(e)}
+        >
+        {props.square.adjacent}
     </button>
     }
 
-    function ToggleClicked(){
+    function ToggleFlag(e){
+        e.preventDefault()
         color === color1 ? setColor(color2) : setColor(color1) 
-        // if(color === color1){
-        //     setColor(color2)
-        // }
     }
 
-    function RightClick(e){
+    function GameOver(e){
         e.preventDefault()
         console.log("keepo")
+    }
+
+    function Clicked(){
+        console.log("kappa")
     }
 }
 

@@ -7,12 +7,12 @@ function Board(props) {
   
   return (
     <div className="container">
-      {squares.map((items) => {
+      {squares.map((items, index) => {
         return (
-          <div >
-            {items.map((subItems) => {
-              return <div>
-                <Square square={subItems} lift={lift}/>
+          <div key={index}>
+            {items.map((subItems, sIndex) => {
+              return <div key={sIndex}>
+                <Square key={subItems.id.toString()} square={subItems} lift={lift}/>
               </div>
             })}
           </div>
