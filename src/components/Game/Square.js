@@ -10,6 +10,7 @@ function Square(props){
     let color1 = "blue"
     let color2 = "red"
     const [color, setColor] = useState(color1)
+    const [flagged, setFlagged] = useState(false)
     //const [flag, setFlag] = useState(false)
 
     
@@ -19,20 +20,16 @@ function Square(props){
         backgroundColor: color 
     }
 
+    let bomb = <button 
+        style={style} 
+        className="square" 
+        onClick={(e) => GameOver(e)}
+        onContextMenu={(e) => ToggleFlag(e)}
+        >
+        bomb
+    </button>
 
-    if(props.square.bomb===true){
-        return <button 
-            style={style} 
-            className="square" 
-            onClick={(e) => GameOver(e)}
-            onContextMenu={(e) => ToggleFlag(e)}
-            >
-            bomb
-        </button>
-    }
-
-    if(props.square.bomb===false){
-        return <button 
+    let nonBomb =  <button 
         style={style} 
         className="square" 
         onClick={Clicked}
@@ -40,16 +37,26 @@ function Square(props){
         >
         {props.square.adjacent}
     </button>
+
+
+    if(props.square.bomb===true){
+        return bomb
     }
+
+    if(props.square.bomb===false){
+        return nonBomb
+    }
+
 
     function ToggleFlag(e){
         e.preventDefault()
         color === color1 ? setColor(color2) : setColor(color1) 
+        flagged === false ? setFlagged(true) : setFlagged(false)
     }
 
     function GameOver(e){
         e.preventDefault()
-        console.log("keepo")
+        alert("GAME OVER")
     }
 
     function Clicked(){
