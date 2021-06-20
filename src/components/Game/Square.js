@@ -27,7 +27,6 @@ function Square(props){
         onClick={(e) => GameOver(e)}
         onContextMenu={(e) => ToggleFlag(e)}
         >
-        bomb
     </button>
 
     let nonBomb =  <button 
