@@ -12,9 +12,6 @@ function Square(props){
     const [color, setColor] = useState(color1)
     const [flagged, setFlagged] = useState(false)
     const [clicked, setClicked] = useState(false)
-    //const [flag, setFlag] = useState(false)
-
-    
 
     let style = {
         color: "black",
