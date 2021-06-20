@@ -7,7 +7,7 @@ import {useState} from 'react'
 
 
 function Square(props){
-    let color1 = "blue"
+    let color1 = ""
     let color2 = "red"
     const [color, setColor] = useState(color1)
     const [flagged, setFlagged] = useState(false)
@@ -17,7 +17,7 @@ function Square(props){
     
 
     let style = {
-        color: "white",
+        color: "black",
         backgroundColor: color 
     }
 
@@ -51,8 +51,9 @@ function Square(props){
     function ToggleFlag(e){
         e.preventDefault()
         if(!clicked){
-            color === color1 ? setColor(color2) : setColor(color1) 
+            color === color1 ? setColor(color2) : setColor(color1);
             flagged === false ? setFlagged(true) : setFlagged(false)
+            console.log(color)
         }
     
     }
@@ -66,8 +67,9 @@ function Square(props){
 
     function Click(){
         if(!flagged){
-            console.log("kappa")
+            
             setClicked(true)
+            
         }
         
         props.lift()
