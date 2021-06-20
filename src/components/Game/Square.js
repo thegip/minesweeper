@@ -11,6 +11,7 @@ function Square(props){
     let color2 = "red"
     const [color, setColor] = useState(color1)
     const [flagged, setFlagged] = useState(false)
+    const [clicked, setClicked] = useState(false)
     //const [flag, setFlag] = useState(false)
 
     
@@ -32,10 +33,10 @@ function Square(props){
     let nonBomb =  <button 
         style={style} 
         className="square" 
-        onClick={Clicked}
+        onClick={Click}
         onContextMenu={(e) => ToggleFlag(e)}
         >
-        {props.square.adjacent}
+        {clicked === true ? props.square.adjacent : ''}
     </button>
 
 
@@ -50,17 +51,26 @@ function Square(props){
 
     function ToggleFlag(e){
         e.preventDefault()
-        color === color1 ? setColor(color2) : setColor(color1) 
-        flagged === false ? setFlagged(true) : setFlagged(false)
+        if(!clicked){
+            color === color1 ? setColor(color2) : setColor(color1) 
+            flagged === false ? setFlagged(true) : setFlagged(false)
+        }
+    
     }
 
     function GameOver(e){
         e.preventDefault()
-        alert("GAME OVER")
+        if(!flagged){
+            alert("GAME OVER")
+        }
     }
 
-    function Clicked(){
-        console.log("kappa")
+    function Click(){
+        if(!flagged){
+            console.log("kappa")
+            setClicked(true)
+        }
+        
         props.lift()
     }
 }
