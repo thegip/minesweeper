@@ -1,4 +1,5 @@
 import Game from './components/Game/Game'
+import './Normalize.css'
 import './App.css'
 import {GenerateBoard} from './components/GenerateBoard'
 

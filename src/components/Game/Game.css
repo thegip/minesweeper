@@ -1,16 +1,25 @@
 .container{
     display: flex;
-    background-color: #2196F3;
-    padding: 10px;
+    align-items: center;
+  justify-content: center;
 }
 
 .square{
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    font-size: 8px;
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
     color: black;
-    min-width: 50px;
-    min-height: 50px;
+    width: 50px;
+    height: 50px;
+    background: #e0e0e0;
+    
+    
+}
+.square_default{
+
+}
+
+.square_cicked{
+
 }
