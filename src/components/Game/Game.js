@@ -31,4 +31,4 @@ function lift(){
 }
 
 
-  export default Board
+export default Board
