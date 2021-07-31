@@ -10,13 +10,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>MINESWEEEPER</h1>
-        <div class="gamearea">
+      </header>
+      <h1>Viktor Gip</h1>
+      <h3>Web Developer</h3>
+      <br/>
+      <h2>MINESWEEEPER</h2>
+      <div class="gamearea">
           <div>~~menu~~</div>
-
           <Game board={board}/>
         </div>
-      </header>
     </div>
   )
 }
