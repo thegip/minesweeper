@@ -7,14 +7,14 @@ import {useState} from 'react'
 
 
 function Square(props){
-    let color1 = ""
-    let color2 = "red"
+    let color1 = "CadetBlue"
+    let color2 = "bisque"
     const [color, setColor] = useState(color1)
     const [flagged, setFlagged] = useState(false)
     const [clicked, setClicked] = useState(false)
 
     let style = {
-        color: "black",
+        color: "bisque",
         backgroundColor: color 
     }
 
