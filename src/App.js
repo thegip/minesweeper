@@ -1,4 +1,5 @@
 import Game from './components/Game/Game'
+import Info from './components/InfoContent/Index'
 import './Normalize.css'
 import './App.css'
 import {GenerateBoard} from './components/GenerateBoard'
@@ -11,11 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <h1>Viktor Gip</h1>
-      <h3>Web Developer</h3>
-      
-      <br/>
-      <h3>try out one of my projects</h3>
+      <Info/>
       <h2>MINESWEEEPER</h2>
       <input id="number" type="number" value="42"/>
       <div class="gamearea">
