@@ -1,5 +1,5 @@
 import Game from './components/Game/Game'
-import Info from './components/InfoContent/Index'
+import Info from './components/InfoContent/InfoContent'
 import './Normalize.css'
 import './App.css'
 import {GenerateBoard} from './components/GenerateBoard'
