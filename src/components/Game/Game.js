@@ -11,6 +11,8 @@ function Board(props) {
     <div class="temp">
        <h2>MINESWEEEPER</h2>
       <input id="number" type="number" value="42"/>
+      <input id="number" type="number" value="42"/>
+      <input id="number" type="number" value="42"/>
       <div>~~menu~~</div>
       <div className="container">
         {squares.map((items, index) => {
