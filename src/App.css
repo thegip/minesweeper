@@ -2,3 +2,8 @@
     text-align: center; 
     background-color: bisque;min-height: 100vh;
 }
+.showGame:hover{
+    color: blue;
+    cursor: pointer;
+    
+}
