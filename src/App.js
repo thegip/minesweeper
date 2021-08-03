@@ -17,9 +17,10 @@ function App() {
       <header className="App-header">
       </header>
       <Info/>
-      <button onClick={() => setShowGame(!showGame)}>show game</button>
+      <h3 onClick={() => setShowGame(!showGame)}>try out a project</h3>
+      
       {showGame && <Game board={board}/>}
-      <div>Project information</div>
+      
     </div>
   )
 }
