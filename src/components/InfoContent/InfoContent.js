@@ -3,12 +3,14 @@ function Info() {
     return(
         <div>
             <h1>Viktor Gip</h1>
-            <h3>Web Developer</h3>
+            <h3>Frontend Developer</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                This site is a work in progress
+                More information will be available soon    
             </p>
             <div>
-                <button>linked in</button>
+                <button>LinkedIn</button>
+                <button>Github</button>
             </div>
             <br/>
         </div>

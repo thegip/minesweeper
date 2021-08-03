@@ -20,7 +20,7 @@ function App() {
       <h3 className="showGame" onClick={() => setShowGame(!showGame)}>try out a project</h3>
       
       {showGame && <Game board={board}/>}
-      
+      <div>Github for this website</div>
     </div>
   )
 }
