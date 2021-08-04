@@ -6,7 +6,7 @@
     color: white;
 }
 .showGame:hover{
-    color: blue;
+    color: rgb(255,113,223);
     cursor: pointer;
     
 }
