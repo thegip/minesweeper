@@ -5,14 +5,14 @@
 }
 
 .square{
-    background-color: rgba(255, 255, 255, 0.8);
+    
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    color: black;
+    color: white;
     width: 50px;
     height: 50px;
-    background: #e0e0e0;
+    
     
     
 }
