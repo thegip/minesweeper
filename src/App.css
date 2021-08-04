@@ -1,10 +1,15 @@
 .App {
     text-align: center; 
-    background-color: bisque;min-height: 100vh;
+    background: rgb(255,113,223);
+    background: linear-gradient(57deg, rgba(255,113,223,1) 0%, rgba(255,192,133,1) 49%);     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
 .showGame:hover{
     color: blue;
     cursor: pointer;
     
 }
+
+
+   
