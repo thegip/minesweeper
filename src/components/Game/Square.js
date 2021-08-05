@@ -7,8 +7,8 @@ import {useState} from 'react'
 
 
 function Square(props){
-    let color1 = "Transparent"
-    let color2 = "LightCoral"
+    let color1 = "rgba(255,255,255,0.06)"
+    let color2 = "rgba(255,220,220,0.7)"
     let color3 = "white"
     const [color, setColor] = useState(color1)
     const [flagged, setFlagged] = useState(false)
