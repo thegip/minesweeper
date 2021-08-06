@@ -1,8 +1,9 @@
 .button1 {
-    background-color: Transparent;
-    border: solid;
+    background-color: rgba(255,255,255,0);
+    
     border-color: white;
-    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -12,7 +13,6 @@
     margin: 10px;
   }
 .button1:hover{
-    border-color: rgb(255,113,223);
-    color: rgb(255,113,223);
+    background-color: rgba(255,255,255,0.1);
     cursor: pointer;
 }
