@@ -4,11 +4,11 @@
     background: linear-gradient(57deg, rgba(255,113,223,1) 0%, rgba(255,192,133,1) 49%);     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     color: white;
+    padding: 20px;
 }
 .showGame:hover{
     color: rgb(255,113,223);
     cursor: pointer;
-    
 }
 
 

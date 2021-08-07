@@ -9,6 +9,7 @@ function Info() {
                 More information will be available soon    
             </p>
             <div>
+                <button className="button1">Contact</button>
                 <button className="button1">LinkedIn</button>
                 <button className="button1">Github</button>
             </div>
