@@ -1,6 +1,11 @@
 export function GenerateBoard(x,y,bombCount){
     let id = 0
     let board = []
+    
+    //add 2 to the desired array to have a simpler search algorythm
+    x=x+2
+    y=y+2
+
     for(let i=0; i<x; i++){
         board[i]=[]
         for(let j=0; j<y; j++){
@@ -28,11 +33,12 @@ function GenerateBombs(board,id,bombCount){
         bombLocations[i]=Math.floor(Math.random() * length)
     }
 
+    //for each bomb 
     for(let k=0; k<bombCount; k++){
-        for(let i=0; i<board.length; i++){
-            for(let j=0; j<board[0].length; j++){
+        for(let i=1; i<(board.length-1); i++){
+            for(let j=1; j<(board[0].length-1); j++){
                 if (board[i][j].id === bombLocations[k]){
-                    console.log(board[i][j].id)
+                    //console.log(board[i][j].id)
                     board[i][j].bomb=true
                 }
             }
