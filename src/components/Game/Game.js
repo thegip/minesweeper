@@ -1,7 +1,10 @@
 import './Game.css'
 import Square from './Square'
 import {useEffect} from 'react'
+import {GenerateBoard} from './GenerateBoard'
 
+const board = GenerateBoard(10,10,10)
+console.log(board)
 
 // make 2 arreys in generate board instead?? 
 let temp = 0
@@ -27,7 +30,7 @@ function Board(props) {
       <div>~~menu~~</div>
 
       <div className="container">
-        {squares.map((items, index) => {
+        {board.map((items, index) => {
           
           return (
             <div key={index}>
