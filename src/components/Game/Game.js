@@ -10,7 +10,7 @@ console.log(board)
 let temp = 0
 function Board(props) {
   
-   const squares = props.board
+  //const squares = props.board
   // const keepo = squares.map(x => x)
   // keepo.shift()
   // keepo.pop()
@@ -22,7 +22,7 @@ function Board(props) {
   // });
   // console.log(keepo)
 
-  console.log(squares)
+ 
   return (
     <div class="temp">
        <h2>MINESWEEEPER</h2>
