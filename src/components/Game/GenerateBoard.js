@@ -95,3 +95,26 @@ function CalculateCenter(board){
         }
     }
 }
+
+//sketch for a potential refactor 
+function TestTest(i,j,board){
+    let temp
+    for (let a=i-1;a<=i+1;a++){
+
+        for (let b=j-1;b<=j+1;b++){
+            if(typeof board[a] === 'undefined') {
+                //console.log("mynamejeff")
+            }
+
+            else if(typeof board[a][b] === 'undefined'){
+                //console.log("mynamejeff2")
+            }
+
+            else if(board[a][b].bomb === true){
+                    temp++
+            }
+
+        }
+    }
+    return temp 
+}
