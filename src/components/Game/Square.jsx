@@ -33,7 +33,7 @@ function Square(props){
         onClick={Click}
         onContextMenu={(e) => ToggleFlag(e)}
         >
-        {clicked === true ? props.square.adjacent : props.square.row}
+        {clicked === true ? props.square.adjacent : ' '}
     </button>
 
 

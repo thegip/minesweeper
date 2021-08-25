@@ -3,8 +3,7 @@ export function GenerateBoard(x,y,bombCount){
     let board = []
     
     //add 2 to the desired array to have a simpler search algorythm
-    x=x+2
-    y=y+2
+   
 
     for(let i=0; i<x; i++){
         board[i]=[]
@@ -75,14 +74,20 @@ function CalculateCenter(board){
     
 
     //loop trough the inner part of "board"
-    for(let i=1; i<board.length-1; i++){
-        for(let j=1; j<board[0].length-1; j++){
+    for(let i=0; i<board.length; i++){
+        for(let j=0; j<board[0].length; j++){
             let adjecentBombs = 0
             //check the adjacent squares of board[i][j]
             for (let a=i-1;a<=i+1;a++){
                 for (let b=j-1;b<=j+1;b++){
-                    if (board[a][b].bomb === true){
-                        adjecentBombs++
+                    if(typeof board[a] === 'undefined') {
+                        //console.log("mynamejeff")
+                    }
+                    else if(typeof board[a][b] === 'undefined'){
+                        //console.log("mynamejeff2")
+                    }
+                    else if(board[a][b].bomb === true){
+                            adjecentBombs++
                     }
                 }
             }
