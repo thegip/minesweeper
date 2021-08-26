@@ -6,21 +6,10 @@ import {GenerateBoard} from './GenerateBoard'
 const board = GenerateBoard(10,10,10)
 console.log(board)
 
-// make 2 arreys in generate board instead?? 
 let temp = 0
 function Board(props) {
   
-  //const squares = props.board
-  // const keepo = squares.map(x => x)
-  // keepo.shift()
-  // keepo.pop()
-  // console.log(keepo)
-  // keepo.forEach(element => {
-  //   element.shift()
-  //   element.pop()
-    
-  // });
-  // console.log(keepo)
+
 
  
   return (
