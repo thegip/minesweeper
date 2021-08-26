@@ -64,13 +64,16 @@ function Square(props){
     }
 
     function Click(){
+        //console.log(props)
         if(!flagged){
             
             setClicked(true)
             
         }
-        
-        props.lift()
+        if(props.square.adjacent===0){
+             props.lift(props.square.column, props.square.row)
+        }
+       
     }
 }
 

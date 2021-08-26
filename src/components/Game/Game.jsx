@@ -48,9 +48,10 @@ function Board(props) {
 
 }
 
-function lift(){
-  temp++
-  console.log(temp)
+function lift(column, row){
+  //temp++
+  console.log(column, row)
+  
 }
 
 
