@@ -13,7 +13,9 @@ export function GenerateBoard(x,y,bombCount){
                 column: i,
                 row: j,
                 adjacent:0,
-                bomb: false
+                bomb: false,
+                clicked: false,
+                flagged: false
             }
             id++
         }
