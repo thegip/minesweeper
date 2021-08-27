@@ -8,19 +8,12 @@ console.log(board)
 
 let temp = 0
 function Board(props) {
-  
-
-
- 
   return (
     <div class="temp">
-       <h2>MINESWEEEPER</h2>
-
+      <h2>MINESWEEEPER</h2>
       <div>~~menu~~</div>
-
       <div className="container">
         {board.map((items, index) => {
-          
           return (
             <div key={index}>
               {items.map((subItems, sIndex) => {
@@ -37,7 +30,6 @@ function Board(props) {
       </div>
     </div>
   );
-
 }
 
 function lift(column, row){
