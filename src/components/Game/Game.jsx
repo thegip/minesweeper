@@ -25,7 +25,10 @@ function Board(props) {
             <div key={index}>
               {items.map((subItems, sIndex) => {
                 return <div key={sIndex}>
-                  <Square key={subItems.id.toString()} square={subItems} lift={lift}/>
+                  <Square 
+                    key={subItems.id.toString()} 
+                    square={subItems} lift={lift}
+                    />
                 </div>
               })}
             </div>
@@ -40,7 +43,7 @@ function Board(props) {
 function lift(column, row){
   //temp++
   console.log(column, row)
-  
+  console.log(board)
 }
 
 
