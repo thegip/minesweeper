@@ -19,6 +19,8 @@ function App() {
       
       {showGame && <Game/>}
       <div>Github for this website</div>
+
+      <div>stuff from api</div>
     </div>
   )
 }
