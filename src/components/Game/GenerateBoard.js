@@ -1,35 +1,36 @@
+function Squrae (column, row){
+    this.id = "" + column + row;
+    this.column = column;
+    this.row = row;
+    this.adjacent = 0;
+    this.bomb = false;
+    this.clicked = false;
+    this.flagged = false;
+}
+
 export function GenerateBoard(x,y,bombCount){
-    let id = 0
+    let length = 0
     let board = []
     
    //todo convert to objekts
-   function Squrae(column, row){
-        this.id = ""+column+row,
-        this.column= column,
-        this.row = row,
-        this.adjacent = 0,
-        this.bomb = false,
-        this.clicked = false,
-        this.flagged = false
-       
-   }
+  
 
  //add 2 to the desired array to have a simpler search algorythm
     for(let i=0; i<x; i++){
         board[i]=[]
         for(let j=0; j<y; j++){
             board[i][j]= new Squrae(i,j)
+            length++
         }
     }
    
-    GenerateBombs(board,id,bombCount)
+    GenerateBombs(board,length,bombCount)
     CalculateAdjecentBombs(board)
 
     return(board)
 }
 
-function GenerateBombs(board,id,bombCount){
-    let length = id
+function GenerateBombs(board,length,bombCount){
     let bombLocations = []
     for(let i=0; i<bombCount; i++){
         bombLocations[i]=Math.floor(Math.random() * length)
@@ -39,7 +40,7 @@ function GenerateBombs(board,id,bombCount){
     for(let k=0; k<bombCount; k++){
         for(let i=1; i<(board.length-1); i++){
             for(let j=1; j<(board[0].length-1); j++){
-                if (board[i][j].id === bombLocations[k]){
+                if (board[i][j].length === bombLocations[k]){
                     //console.log(board[i][j].id)
                     board[i][j].bomb=true
                 }
