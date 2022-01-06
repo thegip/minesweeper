@@ -3,8 +3,14 @@ export function GenerateBoard(x,y,bombCount){
     let board = []
     
    //todo convert to objekts
-   function Squrae(name){
-       this.name = name
+   function Squrae(column, row){
+        this.id = ""+column+row,
+        this.column= column,
+        this.row = row,
+        this.adjacent = 0,
+        this.bomb = false,
+        this.clicked = false,
+        this.flagged = false
        
    }
 
