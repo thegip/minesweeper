@@ -2,9 +2,13 @@ export function GenerateBoard(x,y,bombCount){
     let id = 0
     let board = []
     
-    //add 2 to the desired array to have a simpler search algorythm
-   
+   //todo convert to objekts
+   function Squrae(name){
+       this.name = name
+       
+   }
 
+ //add 2 to the desired array to have a simpler search algorythm
     for(let i=0; i<x; i++){
         board[i]=[]
         for(let j=0; j<y; j++){
