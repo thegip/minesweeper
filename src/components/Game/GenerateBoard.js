@@ -18,16 +18,7 @@ export function GenerateBoard(x,y,bombCount){
     for(let i=0; i<x; i++){
         board[i]=[]
         for(let j=0; j<y; j++){
-            board[i][j]={
-                id: id,
-                column: i,
-                row: j,
-                adjacent:0,
-                bomb: false,
-                clicked: false,
-                flagged: false
-            }
-            id++
+            board[i][j]= new Squrae(i,j)
         }
     }
    
