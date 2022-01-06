@@ -3,7 +3,7 @@ import Square from './Square'
 import {useEffect} from 'react'
 import {GenerateBoard} from './GenerateBoard'
 
-const board = GenerateBoard(10,10,10)
+const board = GenerateBoard(13,9,30)
 console.log(board)
 
 let temp = 0
