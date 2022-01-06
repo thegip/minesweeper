@@ -11,7 +11,6 @@ function Board(props) {
   return (
     <div class="temp">
       <h2>MINESWEEEPER</h2>
-      <div>~~menu~~</div>
       <div className="container">
         {board.map((items, index) => {
           return (
