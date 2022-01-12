@@ -11,8 +11,8 @@ function Info() {
             <h3>Frontend Developer with a passion for tech and design</h3>
             <div>
                 <button className="button1">Contact</button>
-                <button className="button1">LinkedIn</button>
-                <button className="button1">Github</button>
+                <a className="button1" href="https://www.linkedin.com/in/viktor-gip-052109207/">LinkedIn</a>
+                <a className="button1" href="https://github.com/thegip">Github</a>
             </div>
             <div>
                 <button className="button1">disign work</button>
