@@ -15,13 +15,10 @@ function App() {
       <header className="App-header">
       </header>
       <Info/>
-      <h3 className="showGame" onClick={() => setShowGame(!showGame)}>try out a project</h3>
+      <h3 className="showGame" onClick={() => setShowGame(!showGame)}>Click to play Minesweeper!</h3>
       
       {showGame && <Game/>}
       <div>Github for this website</div>
-
-      <div>stuff from api</div>
-      <div>test from branch</div>
     </div>
   )
 }
