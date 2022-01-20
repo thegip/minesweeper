@@ -16,9 +16,9 @@ function Info() {
             </div>
             <div>
                 <button className="button1">disign work</button>
-                <button className="button1">development work</button>
+                <button className="button1" onClick={() => setShowDevWork(!showDevWork)}>development work</button>
             </div>
-            <DevWork/>
+            {showDevWork && <DevWork/>}
             <br/>
         </div>
     )
