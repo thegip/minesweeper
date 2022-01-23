@@ -4,7 +4,7 @@ import DevWork from "./DevWork/DevWork"
 import {useState} from 'react'
 
 function Info() {
-    const[showDevWork, setShowDevWork] = useState(false)
+    const[showDevWork, setShowDevWork] = useState(true)
     return(
         <div>
             <h1 className="test5">Viktor Gip</h1>
