@@ -32,20 +32,26 @@ function Board(props) {
 }
 
 function Click(x,y,setClicked){
-  console.log("I WAS CLICKED " + board[x][y].id)
-  board[x][y].clicked = true
-  setClicked(board[x][y].clicked)
+  if(!board[x][y].flagged && !board[x][y].clicked){
+    console.log("I WAS CLICKED " + board[x][y].id)
+    board[x][y].clicked = true
+    setClicked(board[x][y].clicked)
+  }
 }
 
 function ToggleFlag(e, x, y, setFlagged){
   e.preventDefault()
-  board[x][y].flagged = !board[x][y].flagged
-  setFlagged(board[x][y].flagged)
-  console.log("I WAS FLAGGED " + board[x][y].flagged)
+  if(!board[x][y].clicked){
+    board[x][y].flagged = !board[x][y].flagged
+    setFlagged(board[x][y].flagged)
+    console.log("I WAS FLAGGED " + board[x][y].flagged)
+  }
 }
 
-function GameOver(e){
-  alert("game over")
+function GameOver(x, y){
+  if(!board[x][y].flagged){
+    alert("game over")
+  }
 }
 
 

@@ -14,7 +14,7 @@ function Square(props){
     let bomb = <button 
         style={style} 
         className="square" 
-        onClick={(e) => props.GameOver(e)}
+        onClick={(e) => props.GameOver(x, y)}
         onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
         >
     </button>
