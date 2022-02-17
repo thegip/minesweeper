@@ -2,10 +2,12 @@ import './Game.css'
 import {useState} from 'react' 
 
 function Square(props){
+    let x = props.square.column
+    let y = props.square.row
     let color1 = "rgba(255,255,255,0.06)"
     let color2 = "rgba(255,220,220,0.7)"
     const [color, setColor] = useState(color1)
-    const [flagged, setFlagged] = useState(props.square.flagged)
+    //const [flagged, setFlagged] = useState(props.square.flagged)
     //const [clicked, setClicked] = useState(props.square.clicked)
     let style = {backgroundColor: color}
 
@@ -20,8 +22,8 @@ function Square(props){
     let nonBomb =  <button 
         style={style} 
         className="square" 
-        onClick={props.Click}
-        onContextMenu={(e) => props.ToggleFlag(e)}
+        onClick={()=>props.Click(x, y)}
+        onContextMenu={(e) => props.ToggleFlag(e, x, y)}
         >
         {props.clicked === true ? props.square.adjacent : ' '}
     </button>

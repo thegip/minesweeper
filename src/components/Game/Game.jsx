@@ -31,13 +31,13 @@ function Board(props) {
   );
 }
 
-function Click(){
-  console.log("I WAS CLICKED")
+function Click(x,y){
+  console.log("I WAS CLICKED " + board[x][y].id)
 }
 
-function ToggleFlag(e){
+function ToggleFlag(e, x, y){
   e.preventDefault()
-  console.log("I WAS FLAGGED")
+  console.log("I WAS FLAGGED " + board[x][y].id)
 }
 
 function GameOver(e){
