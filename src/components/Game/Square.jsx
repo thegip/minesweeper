@@ -15,7 +15,7 @@ function Square(props){
         style={style} 
         className="square" 
         onClick={(e) => props.GameOver(x, y)}
-        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
+        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlaggedHandeler)}
         >
     </button>
 
@@ -23,10 +23,15 @@ function Square(props){
         style={style} 
         className="square" 
         onClick={()=>props.Click(x, y, setClicked)}
-        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
+        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlaggedHandeler)}
         >
-        {clicked === true ? props.square.adjacent : ' '}
+        {clicked ? props.square.adjacent : ' '}
     </button>
+
+    function setFlaggedHandeler(flaggedState){
+        !flagged ? setColor(color2) : setColor(color1)
+        setFlagged(flaggedState)
+    }
 
 
     if(props.square.bomb === true ){

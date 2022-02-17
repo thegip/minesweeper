@@ -2,7 +2,11 @@ import './Game.css'
 import Square from './Square'
 import {GenerateBoard} from './GenerateBoard'
 
-const board = GenerateBoard(13,9,10)
+let rows = 13
+let collumns = 9
+let bombs = 10
+
+const board = GenerateBoard(rows,collumns,bombs)
 console.log(board)
 
 function Board(props) {
