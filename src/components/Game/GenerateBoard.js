@@ -1,11 +1,13 @@
 function Squrae (column, row){
-    this.id = "" + column + row;
-    this.column = column;
-    this.row = row;
-    this.adjacent = 0;
-    this.bomb = false;
-    this.clicked = false;
-    this.flagged = false;
+    return({
+        id: "" + column + row,
+        column: column,
+        row: row,
+        adjacent: 0,
+        bomb: false,
+        clicked: false,
+        flagged: false
+    })
 }
 
 export function GenerateBoard(x,y,bombCount){
@@ -14,7 +16,7 @@ export function GenerateBoard(x,y,bombCount){
     for(let i=0; i<x; i++){
         board[i]=[]
         for(let j=0; j<y; j++){
-            board[i][j]= new Squrae(i,j)
+            board[i][j]= Squrae(i,j)
         }
     }
     GenerateBombs(board,bombCount)
