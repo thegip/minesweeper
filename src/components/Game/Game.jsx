@@ -31,13 +31,17 @@ function Board(props) {
   );
 }
 
-function Click(x,y){
+function Click(x,y,setClicked){
   console.log("I WAS CLICKED " + board[x][y].id)
+  board[x][y].clicked = true
+  setClicked(board[x][y].clicked)
 }
 
-function ToggleFlag(e, x, y){
+function ToggleFlag(e, x, y, setFlagged){
   e.preventDefault()
-  console.log("I WAS FLAGGED " + board[x][y].id)
+  board[x][y].flagged = !board[x][y].flagged
+  setFlagged(board[x][y].flagged)
+  console.log("I WAS FLAGGED " + board[x][y].flagged)
 }
 
 function GameOver(e){

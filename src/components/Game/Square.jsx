@@ -7,25 +7,25 @@ function Square(props){
     let color1 = "rgba(255,255,255,0.06)"
     let color2 = "rgba(255,220,220,0.7)"
     const [color, setColor] = useState(color1)
-    //const [flagged, setFlagged] = useState(props.square.flagged)
-    //const [clicked, setClicked] = useState(props.square.clicked)
+    const [flagged, setFlagged] = useState(props.square.flagged)
+    const [clicked, setClicked] = useState(props.square.clicked)
     let style = {backgroundColor: color}
 
     let bomb = <button 
         style={style} 
         className="square" 
         onClick={(e) => props.GameOver(e)}
-        onContextMenu={(e) => props.ToggleFlag(e)}
+        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
         >
     </button>
 
     let nonBomb =  <button 
         style={style} 
         className="square" 
-        onClick={()=>props.Click(x, y)}
-        onContextMenu={(e) => props.ToggleFlag(e, x, y)}
+        onClick={()=>props.Click(x, y, setClicked)}
+        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
         >
-        {props.clicked === true ? props.square.adjacent : ' '}
+        {clicked === true ? props.square.adjacent : ' '}
     </button>
 
 
