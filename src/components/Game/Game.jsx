@@ -18,7 +18,7 @@ function Board(props) {
                 return <div key={sIndex}>
                   <Square 
                     key={subItems.id.toString()} 
-                    square={subItems} lift={lift}
+                    square={subItems} Click={Click} ToggleFlag={ToggleFlag} GameOver={GameOver}
                     />
                 </div>
               })}
@@ -31,11 +31,19 @@ function Board(props) {
   );
 }
 
-function lift(column, row){
-  //temp++
-  console.log(column, row)
-  //console.log(board)
+function Click(){
+  console.log("I WAS CLICKED")
 }
+
+function ToggleFlag(e){
+  e.preventDefault()
+  console.log("I WAS FLAGGED")
+}
+
+function GameOver(e){
+  alert("game over")
+}
+
 
 
 export default Board

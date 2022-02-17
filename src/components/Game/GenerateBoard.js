@@ -29,10 +29,10 @@ function GenerateBombs(board,bombCount){
         let temp1=Math.floor(Math.random() * board.length)
         let temp2=Math.floor(Math.random() * board[0].length)
 
-        if (board[temp1][temp2].bomb == false){
+        if (board[temp1][temp2].bomb === false){
             board[temp1][temp2].bomb = true;
         }
-        else if (board[temp1][temp2].bomb == true){
+        else if (board[temp1][temp2].bomb === true){
             i--
         }
     }
