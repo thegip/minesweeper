@@ -9,13 +9,13 @@ function Square(props){
     const [color, setColor] = useState(color1)
     const [flagged, setFlagged] = useState(props.square.flagged)
     const [clicked, setClicked] = useState(props.square.clicked)
-    let style = {backgroundColor: color}
+
     useEffect(()=>{
         !flagged ? setColor(color1) : setColor(color2)   
     },[flagged, color1, color2])
     
     let bomb = <button 
-        style={style} 
+        style={{backgroundColor: color}} 
         className="square" 
         onClick={() => props.GameOver(x, y)}
         onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
@@ -23,7 +23,7 @@ function Square(props){
     </button>
 
     let nonBomb =  <button 
-        style={style} 
+        style={{backgroundColor: color}} 
         className="square" 
         onClick={()=>props.Click(x, y, setClicked)}
         onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
@@ -36,12 +36,5 @@ function Square(props){
     }else {
         return nonBomb
     }
-
-    //button logic 
-
-
 }
-
-
-// if total number of squares - bomber === total clicked squraes {win()}
 export default Square
