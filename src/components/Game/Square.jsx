@@ -12,14 +12,13 @@ function Square(props){
     let style = {backgroundColor: color}
     useEffect(()=>{
         !flagged ? setColor(color1) : setColor(color2)   
-    },[])
+    },[flagged, color1, color2])
     
-
     let bomb = <button 
         style={style} 
         className="square" 
-        onClick={(e) => props.GameOver(x, y)}
-        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlaggedHandeler)}
+        onClick={() => props.GameOver(x, y)}
+        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
         >
     </button>
 
@@ -27,16 +26,10 @@ function Square(props){
         style={style} 
         className="square" 
         onClick={()=>props.Click(x, y, setClicked)}
-        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlaggedHandeler)}
+        onContextMenu={(e) => props.ToggleFlag(e, x, y, setFlagged)}
         >
         {clicked ? props.square.adjacent : ' '}
     </button>
-
-    function setFlaggedHandeler(flaggedState){
-        !flagged ? setColor(color2) : setColor(color1)
-        setFlagged(flaggedState)
-    }
-
 
     if(props.square.bomb === true ){
         return bomb
