@@ -13,8 +13,8 @@ function Board(props) {
   return (
     <div class="temp">
       <h2>MINESWEEEPER</h2>
-      <div className="container">
 
+      <div className="container">
         {board.map((items, index) => {
           return (
             <div key={index}>
@@ -29,8 +29,8 @@ function Board(props) {
             </div>
           );
         })}
-
       </div>
+
     </div>
   );
 }
@@ -40,7 +40,14 @@ function Click(x,y,setClicked){
     console.log("I WAS CLICKED " + board[x][y].id)
     board[x][y].clicked = true
     setClicked(board[x][y].clicked)
+    if(!board[x][y].adjacent){
+      MegaReveal(x,y)
+    }
   }
+}
+
+function MegaReveal (x,y){
+  console.log("I SHOULD REVEAL ALL ADJECENT SQUARES BUT ITS NOT IMPLIMENTED" + x + y)
 }
 
 function ToggleFlag(e, x, y, setFlagged){

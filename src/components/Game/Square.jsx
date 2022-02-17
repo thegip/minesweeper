@@ -1,5 +1,5 @@
 import './Game.css'
-import {useState} from 'react' 
+import {useState, useEffect} from 'react' 
 
 function Square(props){
     let x = props.square.column
@@ -10,6 +10,10 @@ function Square(props){
     const [flagged, setFlagged] = useState(props.square.flagged)
     const [clicked, setClicked] = useState(props.square.clicked)
     let style = {backgroundColor: color}
+    useEffect(()=>{
+        !flagged ? setColor(color1) : setColor(color2)   
+    },[])
+    
 
     let bomb = <button 
         style={style} 
